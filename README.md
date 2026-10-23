@@ -1,4 +1,4 @@
-# AgentLatch
+# AgentLatch 🤖🔒
 
 Lightweight coordination and collision prevention for coding agents working in the same workspace.
 
