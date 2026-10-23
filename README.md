@@ -204,3 +204,6 @@ AgentLatch serializes state changes with a small operating-system file mutex sto
 For automatic Codex coordination, claims are acquired immediately before a potentially mutating tool call and released after that tool call completes. If a conflict is found, the mutation is denied before it runs and Codex receives instructions to continue independent work or wait and retry safely.
 
 If AgentLatch cannot read or update its own coordination state, mutation hooks fail closed rather than allowing an uncoordinated write.
+
+# 📄 License
+MIT - Feel free for modify, edit, copy, fork and share
