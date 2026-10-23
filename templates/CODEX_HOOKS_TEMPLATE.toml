@@ -1,0 +1,44 @@
+[[hooks.PreToolUse]]
+matcher = "Bash|Shell|PowerShell|pwsh|local_shell|shell|shell_command|exec_command|container.exec|functions.exec_command|apply_patch|functions.apply_patch|Edit|Write|Read|read_file|write_file|edit_file|grep_files|ctx_execute|ctx_execute_file|ctx_batch_execute|mcp__.*"
+
+[[hooks.PreToolUse.hooks]]
+type = "command"
+command = "agentlatch hook codex pre-tool-use"
+timeout = 5
+statusMessage = "AgentLatch: checking file access"
+
+[[hooks.PostToolUse]]
+matcher = "Bash|Shell|PowerShell|pwsh|local_shell|shell|shell_command|exec_command|container.exec|functions.exec_command|apply_patch|functions.apply_patch|Edit|Write|Read|read_file|write_file|edit_file|grep_files|ctx_execute|ctx_execute_file|ctx_batch_execute|mcp__.*"
+
+[[hooks.PostToolUse.hooks]]
+type = "command"
+command = "agentlatch hook codex post-tool-use"
+timeout = 5
+
+[[hooks.Stop]]
+
+[[hooks.Stop.hooks]]
+type = "command"
+command = "agentlatch hook codex stop"
+timeout = 3
+
+[[hooks.SubagentStop]]
+
+[[hooks.SubagentStop.hooks]]
+type = "command"
+command = "agentlatch hook codex subagent-stop"
+timeout = 3
+
+[[hooks.Interrupt]]
+
+[[hooks.Interrupt.hooks]]
+type = "command"
+command = "agentlatch hook codex interrupt"
+timeout = 3
+
+[[hooks.SessionEnd]]
+
+[[hooks.SessionEnd.hooks]]
+type = "command"
+command = "agentlatch hook codex session-end"
+timeout = 3
